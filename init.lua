@@ -24,3 +24,12 @@ vim.cmd("source " .. vim.fs.joinpath(config_dir, "vims/options.vim"))
 -- lsp 
 require("config.lsp")
 
+-- mappings 
+require("mappings")
+
+-- overseer
+require("config.overseer")
+
+-- nvim-tree 
+require("nvim-tree").setup()
+

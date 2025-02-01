@@ -35,11 +35,15 @@ lspconfig.pylsp.setup{
 lspconfig.clangd.setup{
     filetypes = {"h", "hpp", "c", "cpp", "cuh", "cu", "objc", "objcpp", "proto"},
     capabilites = capabilities,
-    settings = {
-        on_attach = {
-            vim.keymap.set('n', 'gI', "<Cmd>ClangdSwitchSourceHeader<CR>", {silent = true})
-        },
-    }    
+    cmd = {
+        'clangd', '--background-index', '--clang-tidy', '--log=verbose'
+    },
+    init_options = {
+        usePlaceholders = true,
+        completeUnimported = true,
+        clangdFileStatus = true,
+        clangdSemanticHighlighting = true
+    },
 }
 
 -- LSP signature

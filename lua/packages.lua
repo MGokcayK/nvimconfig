@@ -14,11 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 -- All of the packages goes here
     'neovim/nvim-lspconfig',
+    'nvim-tree/nvim-tree.lua',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
     'hrsh7th/vim-vsnip',
+    'p00f/clangd_extensions.nvim',
     "ray-x/lsp_signature.nvim", -- Function signatures
+    {
+        'stevearc/overseer.nvim',
+        opts = {},
+    },
 })

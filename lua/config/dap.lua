@@ -11,6 +11,8 @@ else
     return
 end
 
+require("dap-python").setup(vim.g.python3_host_prog)
+
 local dap = require('dap')
 local dapui = require("dapui")
 dapui.setup()

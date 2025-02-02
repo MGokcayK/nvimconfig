@@ -25,8 +25,8 @@ endif
 set noswapfile
 
 " Ignore certain files and folders when globing
-set wildignore+=*.o,*.obj,*.dylib,*.bin,*.dll,*.exe
-set wildignore+=*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**
+set wildignore+=*.obj,*.dylib,*.bin,*.dll
+set wildignore+=*/.git/*,*/.svn/*,*/__pycache__/*
 set wildignore+=*.jpg,*.png,*.jpeg,*.bmp,*.gif,*.tiff,*.svg,*.ico
 set wildignore+=*.pyc,*.pkl
 set wildignore+=*.DS_Store

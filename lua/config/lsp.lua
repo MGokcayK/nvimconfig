@@ -36,7 +36,23 @@ lspconfig.clangd.setup{
     filetypes = {"h", "hpp", "c", "cpp", "cuh", "cu", "objc", "objcpp", "proto"},
     capabilites = capabilities,
     cmd = {
-        'clangd', '--background-index', '--clang-tidy', '--log=verbose'
+        "clangd", 
+        "--clang-tidy",
+        "--clang-tidy-checks=performance-*,bugprone-*",
+        "--compile-commands-dir=${workspaceFolder}/.vscode/",
+        "--background-index",
+        "--completion-style=detailed",
+        "--enable-config",
+        "--function-arg-placeholders=false",
+        "--all-scopes-completion",
+        "--header-insertion-decorators",
+        "--header-insertion=never",
+        "--log=verbose",
+        "--pch-storage=memory",
+        "--pretty",
+        "--ranking-model=decision_forest",
+        "--cross-file-rename",
+        "-j=16"
     },
     init_options = {
         usePlaceholders = true,
@@ -44,6 +60,14 @@ lspconfig.clangd.setup{
         clangdFileStatus = true,
         clangdSemanticHighlighting = true
     },
+}
+
+lspconfig.opts = {
+	servers = {
+		clangd = {
+			mason = false,
+		},
+	},
 }
 
 -- LSP signature

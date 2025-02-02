@@ -21,8 +21,11 @@ require("lazy").setup({
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
     'hrsh7th/vim-vsnip',
+    'mfussenegger/nvim-dap', 
+    'nvim-neotest/nvim-nio',
+    'rcarriga/nvim-dap-ui', 
     'p00f/clangd_extensions.nvim',
-    "ray-x/lsp_signature.nvim", -- Function signatures
+    "ray-x/lsp_signature.nvim",
     {
         'stevearc/overseer.nvim',
         opts = {},

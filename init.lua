@@ -33,3 +33,5 @@ require("config.overseer")
 -- nvim-tree 
 require("nvim-tree").setup()
 
+-- nvim-dap
+require("config.dap")

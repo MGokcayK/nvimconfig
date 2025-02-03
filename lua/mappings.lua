@@ -11,13 +11,10 @@ vim.keymap.set('n', '<C-F8>', "<Cmd>ClangdSwitchSourceHeader<CR>", {silent = tru
 vim.keymap.set('n', '<C-F9>', "<Cmd>ClangdAST<CR>", {silent = true})
 vim.keymap.set('n', '<C-F10>', "<Cmd>ClangdTypeHierarchy<CR>", {silent = true})
 vim.keymap.set('n', '<C-F11>', "<Cmd>ClangdMemoryUsage<CR>", {silent = true})
-vim.keymap.set('n', '<S-F12>', "<Cmd>ClangdSymbolInfo<CR>", {silent = true})
+vim.keymap.set('n', '<C-F12>', "<Cmd>ClangdSymbolInfo<CR>", {silent = true})
 
 -- quit via ESC key
 vim.keymap.set("t", "<Esc>", [[<c-\><c-n>]])
-
--- nvim-tree open 
-vim.keymap.set('n', '<F1>', "<Cmd>NvimTreeOpen<CR>", {silent = true})
 
 -- nvim dap mappings
 local dap = require("dap")
@@ -28,3 +25,9 @@ vim.keymap.set('n', '<F9>', function() dap.toggle_breakpoint() end)
 vim.keymap.set('n', '<F5>', function() dap.continue() end)
 vim.keymap.set('n', '<S-F5>', function() dap.close() vim.cmd("DapCloseUI") end)
 vim.keymap.set('n', '<S-F6>', function() dap.close() end)
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<F1>', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<F2>', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<C-F1>', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<C-F2>', builtin.help_tags, { desc = 'Telescope help tags' })

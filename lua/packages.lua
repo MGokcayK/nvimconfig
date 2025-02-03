@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 -- All of the packages goes here
     'neovim/nvim-lspconfig',
-    'nvim-tree/nvim-tree.lua',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
@@ -31,4 +30,9 @@ require("lazy").setup({
         'stevearc/overseer.nvim',
         opts = {},
     },
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    -- or                              , branch = '0.1.x',
+          dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 })

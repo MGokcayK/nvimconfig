@@ -27,11 +27,35 @@ require("config.lsp")
 -- overseer
 require("config.overseer")
 
--- nvim-tree 
-require("nvim-tree").setup()
-
 -- nvim-dap
 require("config.dap")
+
+-- telescope
+require('telescope').setup({ 
+    defaults = { 
+        vimgrep_arguments = { 
+            'rg', '--hidden', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case' 
+        }
+    },
+    pickers = {
+        find_files = {
+            hidden = true,
+            -- needed to exclude some files & dirs from general search
+            -- when not included or specified in .gitignore
+            find_command = {
+                "rg",
+                "--files",
+                "--hidden",
+                "--glob=!**/.git/*",
+                "--glob=!**/.idea/*",
+                "--glob=!**/.vscode/*",
+                "--glob=!**/dist/*",
+                "--glob=!**/yarn.lock",
+                "--glob=!**/package-lock.json",
+            },
+        },
+    },
+})
 
 -- mappings 
 require("mappings")

@@ -8,7 +8,10 @@ for Windows these files should be in %AppData%\Local\nvim
 | Key      | Usage |
 |-----     |-------|
 | ESC      | Close windows/terminate command | 
-| F1       | Open `nvimtree` for files. | 
+| F1       | Open Find files ui from telescope. | 
+| CTRL-F1  | Open buffers ui from telescope. | 
+| F2       | Open Live grep ui from telescope. | 
+| CTRL-F2  | Open helps ui from telescope. | 
 | F3       | Run OverseerRun for building and running shell/terminal commands |
 | F4       | Toggle OveerseerRun which shows executions |
 | F5       | Start debugger which also open new ui |

@@ -10,6 +10,7 @@ for Windows these files should be in %AppData%\Local\nvim
 | ESC      | Close windows/terminate command | 
 | F1       | Open Find files ui from telescope. | 
 | CTRL-F1  | Open buffers ui from telescope. | 
+| CTRL-F   | Open Live grep ui with selected string in telescope. | 
 | F2       | Open Live grep ui from telescope. | 
 | CTRL-F2  | Open helps ui from telescope. | 
 | F3       | Run OverseerRun for building and running shell/terminal commands |
@@ -28,3 +29,9 @@ for Windows these files should be in %AppData%\Local\nvim
 | CTRL-F12 | Clangd sembol info |
 | F10      | Jump cursor to tag |
 | F12      | Jump back to previous cursor position |
+| 5        | Vertical split the window |
+| 0        | Horizontal split the window |
+| 6        | Resize window to right with 5 steps |
+| 4        | Resize window to left with 5 steps |
+| 8        | Resize window to up with 5 steps |
+| 2        | Resize window to down with 5 steps |

@@ -6,7 +6,7 @@ vim.keymap.set('n', '<F4>', "<cmd>OverseerToggle<cr>", { noremap = true, silent 
 vim.keymap.set('n', '<F12>', "<C-]>", {silent = true})
 vim.keymap.set('n', '<F10>', "<C-O>", {silent = true})
 
--- -- Clangd
+-- Clangd
 vim.keymap.set('n', '<C-F8>', "<Cmd>ClangdSwitchSourceHeader<CR>", {silent = true})
 vim.keymap.set('n', '<C-F9>', "<Cmd>ClangdAST<CR>", {silent = true})
 vim.keymap.set('n', '<C-F10>', "<Cmd>ClangdTypeHierarchy<CR>", {silent = true})
@@ -26,8 +26,18 @@ vim.keymap.set('n', '<F5>', function() dap.continue() end)
 vim.keymap.set('n', '<S-F5>', function() dap.close() vim.cmd("DapCloseUI") end)
 vim.keymap.set('n', '<S-F6>', function() dap.close() end)
 
+-- telescope mapping
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<F1>', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<F2>', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<C-F>', builtin.grep_string, { desc = 'Telescope grep string' })
 vim.keymap.set('n', '<C-F1>', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<C-F2>', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- window mapping
+vim.keymap.set('n', '6', "<C-W>5>", { noremap = true, desc = 'resize window to right with 5 steps' })
+vim.keymap.set('n', '4', "<C-W>5<", { noremap = true, desc = 'resize window to left with 5 steps' })
+vim.keymap.set('n', '8', "<C-W>5+", { noremap = true, desc = 'resize window to up with 5 steps' })
+vim.keymap.set('n', '2', "<C-W>5-", { noremap = true, desc = 'resize window to down with 5 steps' })
+vim.keymap.set('n', '5', "<Cmd>:vsplit<CR>", { noremap = true, desc = 'vertical split window' })
+vim.keymap.set('n', '0', "<Cmd>:split<CR>", { noremap = true, desc = 'horizontal split window' })

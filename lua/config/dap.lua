@@ -37,10 +37,10 @@ config = {
           -- Provide IDs as strings or tables with "id" and "size" keys
           {
             id = "scopes",
-            size = 0.50, -- Can be float or integer > 1
+            size = 0.30, -- Can be float or integer > 1
           },
           { id = "watches", size = 0.30 },
-          { id = "stacks", size = 0.10 },
+          { id = "stacks", size = 0.30,  open = "<CR>", expand = "o", },
           { id = "breakpoints", size = 0.10 },
         },
         size = 40,

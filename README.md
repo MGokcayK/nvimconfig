@@ -39,3 +39,5 @@ for Windows these files should be in %AppData%\Local\nvim
 | SPACE-DOWN  | Move cursor to below window |
 | SPACE-LEFT  | Move cursor to left window |
 | SPACE-RIGHT | Move cursor to right window |
+| CTRL-K      | Format whole document |
+| CTRL-L      | Format selected code piece |

@@ -10,6 +10,7 @@ for Windows these files should be in %AppData%\Local\nvim
 | ESC         | Close windows/terminate command | 
 | F1          | Open Find files ui from telescope. | 
 | CTRL-F1     | Open buffers ui from telescope. | 
+| SHIFT-F1    | Open file browser ui from telescope. | 
 | CTRL-F      | Open Live grep ui with selected string in telescope. | 
 | F2          | Open Live grep ui from telescope. | 
 | CTRL-F2     | Open helps ui from telescope. | 

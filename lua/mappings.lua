@@ -1,5 +1,5 @@
 -- OverseerRun
-vim.keymap.set('n', '<F3>', "<cmd>OverseerRun<cr>", { noremap = true, silent = true })
+vim.keymap.set('n', '<F3>', "<cmd>OverseerGRun<cr>", { noremap = true, silent = true })
 vim.keymap.set('n', '<F4>', "<cmd>OverseerToggle<cr>", { noremap = true, silent = true })
 
 -- ctags remap
@@ -74,6 +74,9 @@ vim.keymap.set('n', '<F2>', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<C-F>', builtin.grep_string, { desc = 'Telescope grep string' })
 vim.keymap.set('n', '<C-F1>', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<C-F2>', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set("n", "<S-F1>", function()
+	require("telescope").extensions.file_browser.file_browser()
+end)
 
 -- window mapping
 vim.keymap.set('n', '<Space>6', "<C-W>5>", { noremap = true, desc = 'resize window to right with 5 steps' })

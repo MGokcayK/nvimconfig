@@ -56,6 +56,10 @@ require('telescope').setup({
         },
     },
 })
+require("telescope").load_extension "file_browser"
 
 -- mappings 
 require("mappings")
+
+-- noice and notify
+require("config.noice_notify")

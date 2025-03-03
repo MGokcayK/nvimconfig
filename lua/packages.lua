@@ -25,7 +25,6 @@ require("lazy").setup({
     'nvim-neotest/nvim-nio',
     'rcarriga/nvim-dap-ui', 
     'p00f/clangd_extensions.nvim',
-    "ray-x/lsp_signature.nvim",
     {
         'stevearc/overseer.nvim',
         opts = {},
@@ -34,5 +33,24 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
     -- or                              , branch = '0.1.x',
           dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+          -- add any options here
+        },
+        dependencies = {
+          -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+          "MunifTanjim/nui.nvim",
+          -- OPTIONAL:
+          --   `nvim-notify` is only needed, if you want to use the notification view.
+          --   If not available, we use `mini` as the fallback
+          "rcarriga/nvim-notify",
+          }
+    },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 })

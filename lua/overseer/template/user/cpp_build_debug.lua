@@ -16,7 +16,7 @@ return {
         return {
             cmd = { "cmake" },
             args = {"--build", build_dir, "--config Debug", "--target", target},
-            components = { { "open_output", focus = false }, "default" },
+            components = { "default" },
         }
     end,
 }

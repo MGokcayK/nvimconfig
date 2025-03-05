@@ -28,7 +28,17 @@ cmp.setup {
 
 -- Python
 lspconfig.pylsp.setup{
-    capabilites = capabilities,   
+    capabilites = capabilities,
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    --ignore = {'W391'},
+                    maxLineLength = 120
+                }
+            }
+        }
+    }
 }
 
 -- Clangd

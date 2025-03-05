@@ -74,9 +74,7 @@ vim.keymap.set('n', '<F2>', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<C-F>', builtin.grep_string, { desc = 'Telescope grep string' })
 vim.keymap.set('n', '<C-F1>', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<C-F2>', builtin.help_tags, { desc = 'Telescope help tags' })
-vim.keymap.set("n", "<S-F1>", function()
-	require("telescope").extensions.file_browser.file_browser()
-end)
+vim.keymap.set("n", "<S-F1>", function() require("telescope").extensions.file_browser.file_browser() end)
 
 -- window mapping
 vim.keymap.set('n', '<Space>6', "<C-W>5>", { noremap = true, desc = 'resize window to right with 5 steps' })
@@ -89,3 +87,19 @@ vim.keymap.set('n', '<Space><UP>', "<C-W><UP>", { noremap = true, desc = 'move c
 vim.keymap.set('n', '<Space><DOWN>', "<C-W><DOWN>", { noremap = true, desc = 'move cursor to below window' })
 vim.keymap.set('n', '<Space><LEFT>', "<C-W><LEFT>", { noremap = true, desc = 'move cursor to left window' })
 vim.keymap.set('n', '<Space><RIGHT>', "<C-W><RIGHT>", { noremap = true, desc = 'move cursor to right window' })
+
+-- multicursor
+vim.keymap.set("n", "<C-A-Up>", function() require("multicursor-nvim").lineAddCursor(-1) end)
+vim.keymap.set("n", "<C-A-Down>", function() require("multicursor-nvim").lineAddCursor(1) end)
+vim.keymap.set("n", "<C-A-Left>", function() require("multicursor-nvim").lineSkipCursor(-1) end)
+vim.keymap.set("n", "<C-A-Right>", function() require("multicursor-nvim").lineSkipCursor(1) end)
+vim.keymap.set("n", "<C-S-A-Up>", function() require("multicursor-nvim").matchAddCursor(-1) end)
+vim.keymap.set("n", "<C-S-A-Down>", function() require("multicursor-nvim").matchAddCursor(1) end)
+vim.keymap.set("n", "<C-S-A-Left>", function() require("multicursor-nvim").matchSkipCursor(-1) end)
+vim.keymap.set("n", "<C-S-A-Right>", function() require("multicursor-nvim").matchSkipCursor(1) end)
+vim.keymap.set("n", "<C-A-End>", function() 
+    if require("multicursor-nvim").hasCursors() then
+        vim.notify("Cursors removed", "info")
+        require("multicursor-nvim").clearCursors()
+    end
+end)

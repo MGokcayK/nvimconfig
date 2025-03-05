@@ -63,3 +63,6 @@ require("mappings")
 
 -- noice and notify
 require("config.noice_notify")
+
+-- multicursor
+require("multicursor-nvim").setup()

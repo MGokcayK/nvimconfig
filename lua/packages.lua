@@ -52,5 +52,29 @@ require("lazy").setup({
     {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
+    },
+    {
+        "jake-stewart/multicursor.nvim",
+        branch = "1.0",
+    },
+    -- themes 
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        "rebelot/kanagawa.nvim",
+    },
+    {
+        "zaldih/themery.nvim",
+        lazy = false,
+        config = function()
+            require("themery").setup({
+                themes = {"tokyonight-night", "tokyonight-storm", "tokyonight-day", "tokyonight-moon", "kanagawa-wave", "kanagawa-dragon", "kanagawa-lotus"}, -- Your list of installed colorschemes.
+                livePreview = true, -- Apply theme while picking. Default to true.
+            })
+        end
+    },
 })

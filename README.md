@@ -30,6 +30,7 @@ for Windows these files should be in %AppData%\Local\nvim
 | CTRL-F12             | Clangd sembol info |
 | F10                  | Jump cursor to tag |
 | F12                  | Jump back to previous cursor position |
+| SHIFT-F12            | Jump cursor to tag in new window where windows is split vertically |
 | SPACE-5              | Vertical split the window |
 | SPACE-0              | Horizontal split the window |
 | SPACE-6              | Resize window to right with 5 steps |
@@ -42,6 +43,8 @@ for Windows these files should be in %AppData%\Local\nvim
 | SPACE-RIGHT          | Move cursor to right window |
 | CTRL-K               | Format whole document |
 | CTRL-L               | Format selected code piece |
+| CTRL-K               | Scrolling up in lsp. |
+| CTRL-L               | Scrolling down in lsp. |
 | CTRL-ALT-End         | Remove cursors |
 | CTRL-ALT-Up          | Add cursor one line above |
 | CTRL-ALT-Down        | Add cursor one line below |
